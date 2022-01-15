@@ -1,0 +1,55 @@
+﻿<Window x:Class="Pyramid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pyramid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="620">
+    <Grid>
+        <ComboBox
+            Name="Chooser"
+            VerticalAlignment="Top"
+            Height="30"
+            Width="50"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"            
+            SelectionChanged="ChooseN">
+            <TextBlock>1</TextBlock>
+            <TextBlock>2</TextBlock>
+            <TextBlock>3</TextBlock>
+            <TextBlock>4</TextBlock>
+            <TextBlock>5</TextBlock>
+        </ComboBox>
+        <Button 
+            Height="30"
+            Width="70"
+            VerticalAlignment="Top"
+            Margin="300 0 0 0"
+            Click="SolveButton">Решить</Button>
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center">
+            <StackPanel Name="Pir1"                        
+                        Width="200"
+                        Mouse.MouseDown="PirChoose1">
+                <Rectangle Name="Stick1"
+                           Width="30"
+                           Fill="Brown"></Rectangle>
+            </StackPanel>
+            <StackPanel Name="Pir2"
+                        Width="200"
+                        Mouse.MouseDown="PirChoose2">
+                <Rectangle Name="Stick2"
+                           Width="30"
+                           Fill="Brown"></Rectangle>
+            </StackPanel>
+            <StackPanel Name="Pir3"
+                        Width="200"
+                        Mouse.MouseDown="PirChoose3">
+                <Rectangle Name="Stick3"
+                           Width="30"
+                           Fill="Brown"></Rectangle>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
